@@ -7,13 +7,39 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDownIcon, ChevronUpIcon, ArrowUpIcon } from "@heroicons/react/24/outline";
 import dynamic from "next/dynamic";
 import { useState, useEffect, useRef } from "react";
-import { loadStarsPreset } from "tsparticles-preset-stars";
-import { StarIcon, UserIcon, CalendarIcon, ShoppingCartIcon, BuildingStorefrontIcon, HeartIcon, AcademicCapIcon, SparklesIcon } from "@heroicons/react/24/outline";
-import { UsersIcon, ClockIcon, LockClosedIcon, ChatBubbleLeftRightIcon, CheckCircleIcon, ExclamationCircleIcon } from "@heroicons/react/24/solid";
-import { LineChart, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { loadStarsPreset } from "@tsparticles/preset-stars";
+import {
+  StarIcon,
+  UserIcon,
+  CalendarIcon,
+  ShoppingCartIcon,
+  BuildingStorefrontIcon,
+  HeartIcon,
+  AcademicCapIcon,
+  SparklesIcon,
+} from "@heroicons/react/24/outline";
+import {
+  UsersIcon,
+  ClockIcon,
+  LockClosedIcon,
+  ChatBubbleLeftRightIcon,
+  CheckCircleIcon,
+  ExclamationCircleIcon,
+} from "@heroicons/react/24/solid";
+import {
+  LineChart,
+  Line,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 // Динамические импорты
-const Player = dynamic(() => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player), { ssr: false });
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 const Particles = dynamic(() => import("react-particles"), { ssr: false });
 
 // Настройки для частиц (звезды с улучшенной анимацией)
