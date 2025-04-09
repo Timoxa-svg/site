@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDownIcon, ChevronUpIcon, ArrowUpIcon } from "@heroicons/react/24/outline";
 import dynamic from "next/dynamic";
 import { useState, useEffect, useRef } from "react";
+import { loadSlim } from "@tsparticles/slim";
 import { loadStarsPreset } from "@tsparticles/preset-stars";
 import {
   StarIcon,
@@ -42,8 +43,9 @@ const Player = dynamic(
 );
 const Particles = dynamic(() => import("react-particles"), { ssr: false });
 
-// Настройки для частиц (звезды с улучшенной анимацией)
+// Настройка частиц
 const particlesInit = async (engine) => {
+  await loadSlim(engine);
   await loadStarsPreset(engine);
 };
 
