@@ -2,15 +2,28 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChatBubbleLeftIcon, PhoneIcon, RocketLaunchIcon, ShieldCheckIcon, ClockIcon, StarIcon, ChevronDownIcon, ChevronUpIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
-import dynamicImport from 'next/dynamic';
-import { useState, useEffect } from 'react';
+import {
+  ChatBubbleLeftIcon,
+  PhoneIcon,
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+  ClockIcon,
+  StarIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/24/outline";
+import dynamicImport from "next/dynamic";
+import { useState, useEffect } from "react";
 
-const TypeAnimation = dynamicImport(() => import('react-type-animation').then(mod => mod.TypeAnimation), { ssr: false });
-const Lottie = dynamicImport(() => import('react-lottie'), { ssr: false });
-const Particles = dynamicImport(() => import('react-tsparticles'), { ssr: false });
+const TypeAnimation = dynamicImport(
+  () => import("react-type-animation").then((mod) => mod.TypeAnimation),
+  { ssr: false }
+);
+const Lottie = dynamicImport(() => import("react-lottie"), { ssr: false });
+const Particles = dynamicImport(() => import("react-tsparticles"), { ssr: false });
 
-import { loadSlim } from 'tsparticles-slim';
+import { loadSlim } from "@tsparticles/slim";
 
 // Настройки для частиц
 const particlesInit = async (engine) => {
