@@ -41,7 +41,7 @@ const Player = dynamic(
   () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
   { ssr: false }
 );
-const Particles = dynamic(() => import("react-particles"), { ssr: false });
+const Particles = dynamic(() => import("@react-particles"), { ssr: false });
 
 // Настройка частиц
 const particlesInit = async (engine) => {
